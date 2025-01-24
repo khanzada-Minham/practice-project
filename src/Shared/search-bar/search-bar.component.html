@@ -1,20 +1,26 @@
 <nav class="container navbar">
     <div class="container">
-        <div class="dropdown ">
-            <select class="search_bar_button" (change)="navigateTo($event)">
-                <option> Filter</option>
-                <option value="/dashboard">All Data</option>
-                <option value="/logout">Email</option>
-                <option>Company</option>
-                <option>Phone</option>
-            </select>
+      <div class="dropdown">
+        <select class="search_bar_button" (change)="filterValues($event)">
+          <option>Email</option>
+          <option>Username</option>
+          <option>Website</option>
+          <option>Phone</option>
+        </select>
+      </div>
+      <form class="d-flex search_bar" (submit)="searchValuse(inputValues.value); $event.preventDefault()">
+        <input
+          #inputValues
+          class="form-control me-1"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          (input)="searchValuse(inputValues.value)"
+        />
+        <div class="search_button">
+          <button type="submit" class="search_bar_button">Search</button>
         </div>
-        <form class="d-flex search_bar">
-            <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search"
-                (keypress)="searchValuse(inputValues.value)" #inputValues>
-            <div class="search_button">
-                <button type="button" class="search_bar_button">Search</button>
-            </div>
-        </form>
+      </form>
     </div>
-</nav>
+  </nav>
+  

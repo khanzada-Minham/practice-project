@@ -12,27 +12,27 @@ import { Router } from '@angular/router';
 })
 export class SearchBarComponent {
   Api_Data_Stor: any;
-  searchig_Data: any;
+  On_Select_Values: string = 'Email';
+  On_Filter_Data:string = "";
+
   constructor(private dataFetchService: DataFetchService, private router: Router) {
     this.dataFetchService.getDataFetch().subscribe((values) => {
-      this.Api_Data_Stor = values
-    })
+      this.Api_Data_Stor = values;
+    });
   }
-  searchValuse(inputValues: any) {
-    let search_Find = this.Api_Data_Stor.filter((x: { name: string; }) => x.name.toLowerCase().includes(inputValues.toLowerCase()))
-    this.searchig_Data = search_Find;
-    this.searchig_Data.forEach((items: any) => {
-      if (items.name == inputValues) {
-        console.log(items);
-      }
-    })
 
+  filterValues(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.On_Select_Values = selectElement.value;
+    console.log('Filter applied on:', this.On_Select_Values);
   }
-  navigateTo(event: Event): void {
-    const target = event.target as HTMLSelectElement;
-    const value = target.value;
-    if (value != null) {
-      this.router.navigate([value]);
-    }
+
+  searchValuse(inputValue: string) {
+    const filteredData = this.Api_Data_Stor.filter((item: any) => {
+      const searchField = item[this.On_Select_Values.toLowerCase()];
+      return searchField && searchField.toLowerCase().includes(inputValue.toLowerCase());
+    });
+    this.On_Filter_Data = filteredData;
+    console.log('Search Results:', this.On_Filter_Data);
   }
 }
