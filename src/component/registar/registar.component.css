@@ -1,0 +1,33 @@
+.user-image {
+  display: flex;
+  justify-content: center;
+}
+.image {
+  height: 12rem;
+  width: 12rem;
+}
+.text {
+  display: flex;
+  justify-content: center;
+}
+.registerHeading{
+    font-family: sans-serif;
+}
+.password{
+  top: 10px;
+}
+.username{
+  top: 5px;
+ 
+}
+.button{
+  position: relative;
+  top: 30px;
+}
+.btn{
+  color: rgb(0, 0, 0);
+  background-color: rgb(135, 130, 130);
+  border-color: aliceblue;
+  font-size: larger;
+  font-family: cursive;
+}

@@ -1,0 +1,44 @@
+.user-icon {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chack-box-style {
+  display: flex;
+  justify-content: center;
+}
+.form-check-label {
+  width: 10rem;
+}
+.button {
+  position: relative;
+  top: 10px;
+}
+.register {
+  display: flex;
+  justify-content: end;
+}
+a {
+  /* text-decoration: none; */
+  color: black;
+}
+.image {
+  height: 12rem;
+  width: 12rem;
+}
+.user-image {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  background: gray;
+  color: black;
+  font-size: larger;
+  font-family: cursive;
+  border-color: black;
+}
+.login-text {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,76 @@
+<div class="sidebar-bootstap">
+    <div class="sidebar" [ngStyle]="toggleButtonFlage ? { width: '70px' ,transition: '0.5s ease' }:{}">
+        <header class="sidebar-header">
+            <a routerLink="/home"  routerLinkActive="active" class="header-logo">
+                <img src="../../assets/image/images.jpg" alt="sidebar-logo" class="sidebar-logo"
+                    [ngStyle]="toggleButtonFlage ? { width: '45px', height: '40px', transform: 'translate(-4px, 6px)', 'border-radius': '100%',transition: '0.5s ease' } : {}">
+            </a>
+            <button class="toggle" (mouseover)="getToggle()"
+                [ngStyle]="toggleButtonFlage ? { transform: 'translate(-36px, 49px)', fontSize: '1rem' , height: '21px'} : {}">
+                <i class="fa fa-thin fa-angle-left"></i>
+            </button>
+        </header>
+        <nav class="sidebar-nav">
+            <!-- first  nav list-->
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a routerLink="/dashboard"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-solid fa-sliders"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/calender"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-solid fa-calendar-days"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">Calender</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/notification"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-thin fa-bell"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">notification</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/team"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-thin fa-user-group"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">Team</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/analytics"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-thin fa-chart-simple"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/bookmark"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-thin fa-star"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">Bookmark</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/setting"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-thin fa-gear"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">Setting</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- second  nav list-->
+            <ul class="nav-list second-nav">
+                <li class="nav-item">
+                    <a routerLink="/profile"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-thin fa-user"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/logout"  routerLinkActive="active" class="nav-link">
+                        <i class="fa fa-thin fa-right-from-bracket"></i>
+                        <span class="nav-label" [ngClass]="toggleButtonFlage ? 'allSpan' : ''">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

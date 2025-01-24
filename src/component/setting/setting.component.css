@@ -1,0 +1,72 @@
+.form-input {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 5px;
+  height: 54px;
+}
+.d-name {
+  width: 69%;
+  align-items: center;
+  display: flex;
+  position: relative;
+  left: 11rem;
+  padding: 10px;
+  top: 3px;
+  border: 1px solid #e5e4e4;
+}
+.Display-text {
+  display: flex;
+  justify-content: end;
+  font-size: 12px;
+  font-family: emoji;
+  color: #8e8c8c;
+}
+.button-Save-Changes {
+  display: flex;
+  justify-content: end;
+  top: 10px;
+  position: relative;
+}
+.l-name {
+  border: 1px solid #e5e4e4;
+}
+.Account-heading {
+  width: 32%;
+  display: flex;
+  justify-content: end;
+  font-size: 33px;
+  font-family: sans-serif;
+}
+.Profile-heading {
+  width: 34%;
+  display: flex;
+  justify-content: end;
+  font-size: 33px;
+  font-family: sans-serif;
+}
+.website {
+  position: relative;
+  top: 8px;
+}
+.website1 {
+  position: relative;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile_Button {
+  display: flex;
+  justify-content: end;
+  width: 84%;
+  top: 30px;
+  position: relative;
+}
+.textarea {
+  width: 69%;
+}
+.btn-lg{
+  background-color: #252b41;
+  border: none;
+}
