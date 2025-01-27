@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { DataFetchService } from '../../Services/data-fetch.service';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
-
+import { DataFetchService } from '../../Services/data-fetch.service';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-search-bar',
   standalone: true,
@@ -35,4 +34,5 @@ export class SearchBarComponent {
     this.On_Filter_Data = filteredData;
     console.log('Search Results:', this.On_Filter_Data);
   }
+
 }

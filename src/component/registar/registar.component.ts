@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-registar',
@@ -9,11 +11,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './registar.component.css'
 })
 export class RegistarComponent {
+  constructor(private router: Router) { }
   registerObj: RegisterModel = new RegisterModel()
   registerForm() {
     const localUser = localStorage.getItem('user');
     // console.log('localUser',localUser);
     if (localUser != null) {
+      this.router.navigate(['/login']);
       const user = JSON.parse(localUser);
       // console.log('user',user);
       user.push(this.registerObj)

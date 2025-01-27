@@ -12,5 +12,4 @@ export class DataFetchService {
   getDataFetch() {
     return this.http.get(this.API);
   }
-
 }

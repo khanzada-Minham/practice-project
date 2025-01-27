@@ -11,9 +11,7 @@ import {  Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private router:Router){
-
-  }
+  constructor(private router:Router){ }
 
   loginObj: loginModel = new loginModel()
   loginForm() {
