@@ -4,6 +4,7 @@ import { DataFetchService } from '../../Services/data-fetch.service';
 import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchBarComponent } from "../../Shared/search-bar/search-bar.component";
+import { SearchService } from '../../Services/search.service';
 
 
 @Component({
@@ -15,14 +16,17 @@ import { SearchBarComponent } from "../../Shared/search-bar/search-bar.component
 })
 export class DashboardComponent {
   user: any;
-  constructor(private dataFetchService: DataFetchService) {
+  categoriesData:any
+  constructor(private dataFetchService: DataFetchService, private Search:SearchService) {
     this.dataFetchService.getDataFetch().subscribe((values) => {
       this.user = values;
     });
+    this.Search.On_Filter_Data = this.categoriesData
   }
 
   pSize: number = 4;
   currentPage: number = 1;
-
   
 }
+
+

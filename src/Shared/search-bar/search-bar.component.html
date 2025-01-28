@@ -1,16 +1,15 @@
 <nav class="container navbar">
     <div class="container">
       <div class="dropdown">
-        <select class="search_bar_button" (change)="filterValues($event)">
+        <select class="search_bar_button" (change)="onFilterValue($event)">
           <option>Email</option>
           <option>Username</option>
           <option>Website</option>
           <option>Phone</option>
         </select>
       </div>
-      <form class="d-flex search_bar" (submit)="searchValuse(inputValues.value); $event.preventDefault()">
-        <input #inputValues class="form-control me-1"type="search"placeholder="Search"aria-label="Search"(input)="searchValuse(inputValues.value)"/>
-         
+      <form class="d-flex search_bar" (submit)="searchItems(inputValues.value); $event.preventDefault()">
+        <input #inputValues class="form-control me-1"type="search"placeholder="Search"aria-label="Search"(input)="searchItems(inputValues.value)"/>  
         <div class="search_button">
           <button type="submit" class="search_bar_button">Search</button>
         </div>

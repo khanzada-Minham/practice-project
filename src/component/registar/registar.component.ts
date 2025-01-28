@@ -15,11 +15,9 @@ export class RegistarComponent {
   registerObj: RegisterModel = new RegisterModel()
   registerForm() {
     const localUser = localStorage.getItem('user');
-    // console.log('localUser',localUser);
     if (localUser != null) {
       this.router.navigate(['/login']);
       const user = JSON.parse(localUser);
-      // console.log('user',user);
       user.push(this.registerObj)
       localStorage.setItem('user', JSON.stringify(user))
     }
